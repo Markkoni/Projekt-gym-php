@@ -1,0 +1,544 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-position: fixed;
+    background-repeat: no-repeat;
+    height: 600px;
+    background-size:cover;
+    background-image: url("images/slika1.png");
+    position: relative;
+    margin-top: -100px;
+  
+}
+
+main {
+    padding: 80px;
+    background-color:rgba(10, 203, 100, 0.121);
+    
+   
+}
+h1 {
+    font-size: 50px;
+    margin: 10px 0;
+}
+p {
+    line-height: 32px;
+    font-family: "Poppins";
+    font-size: 21px;
+    
+
+}
+img {
+    float: left;
+    width:400px;	
+
+}
+
+
+.double {
+    border-style: double;
+    border-width: 5px;
+}
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(49, 46, 46);
+}
+
+li {
+    float: left;
+    
+}
+
+li a {
+    display: block;
+    position: relative;
+    text-align: center;
+    color: rgb(241, 234, 234);
+    font-size: larger;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.img1 {
+    float: left;
+    width: 350px;
+    height: 250px;
+    border-radius: 20px;
+    transition: 0.3s;
+    margin-right: 20px;
+    	
+}
+.img1:hover {opacity: 0.5;}
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid rgb(0, 0, 0);
+    float: left;
+    width: 250px;
+}
+div.gallery img {
+    width: 170px; 
+    height: 110px;
+}
+
+label {
+    font-family:verdana;
+}
+input[type="text"], select, textarea {
+    width: 600px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type="email"] {
+    width: 600px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit]:hover {
+    background-color: #256028;
+}
+input[type=submit]:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+input[type=submit] {
+    border-radius: 5px;
+    color: white;
+    font-size: larger;
+    background-color: #63eb41;
+    padding: 20px;
+    width: 600px;
+    animation: efekt 4s infinite;
+}
+@keyframes efekt {
+    20% {box-shadow: 10px 10px 10px greenyellow;}
+  }
+
+.space {
+    width: 900px; 
+    height: 650px;
+
+}   
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid rgb(61, 58, 58);
+}
+th {
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(193, 234, 203);
+  }
+tr.no-color {
+background-color: transparent; 
+}
+footer {
+	background-color:rgb(169, 188, 62);
+    padding: 1px;
+	clear: both;
+}
+footer p {
+	color: black;
+	text-align: center;
+	margin: 0.5em;
+    font-size: 15px;
+}
+footer img {
+	width: 20px;
+    float:initial;
+}
+
+.navigacija {
+    display: flex;
+    justify-content: center;
+    background-color:rgb(49, 46, 46);
+}
+
+li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #ff2a00; 
+    bottom: 5px;
+    left: 0;
+    transform: scaleX(0); 
+    transform-origin: left; 
+    transition: transform 0.3s; 
+}
+  
+li a:hover::after {
+    transform: scaleX(1); 
+}
+
+
+
+.container {
+    display: flex;
+    background-color: rgb(49, 46, 46);
+    padding: 80px;
+    height: 500px;
+    color: whitesmoke;
+    
+  }
+
+.tekst {
+    padding: 10px;
+    margin-right: 100px; 
+  }
+
+
+.slajd {display: none}
+
+.anim {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes anim {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+.brslike {
+    color: #ffffff;
+    font-size: 17px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 800px;
+    left: 75px;
+  }
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    padding: 10px;
+    margin-top: 100px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  .prev{
+    left: 80px;
+  }
+
+  .next {
+    right: 990px;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  .tockice {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .column {
+    float: left;
+    width: 50%;
+  }
+
+  .sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+
+  .dwnld {
+    background-color: rgba(10, 203, 100, 0.448);
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  .dwnld:hover {
+    background-color: green;
+  }
+  
+  .kontejner {
+    position: relative;
+  }
+  
+  .slajdovi {
+    display: none;
+  }
+  
+  .gcursor {
+    cursor: pointer;
+  }
+  
+  .gprev,
+  .gnext {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  .gnext {
+    right: 160px;
+    border-radius: 3px 0 0 3px;
+  }
+  .gprev {
+    left: 0px;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .gprev:hover,
+  .gnext:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .brojslike {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  
+  .caption-container {
+    position:absolute;
+    top: 600px;
+    width: 1200px;
+    text-align: center;
+    background-color: #222;
+    color: white;
+  }
+  
+  .red::after {
+    content: "";
+    display: table;
+    clear: both;
+
+  }
+  
+  .kolona {
+    float: left;
+    
+    margin-top: 74px;
+  }
+  
+  .eff {
+    opacity: 0.6;
+  }
+  
+  .gactive,
+  .eff:hover {
+    opacity: 1;
+  }
+
+  .zaboldanitxt{
+    width: 700px;
+    margin: auto;
+    padding-bottom: 100px;
+  }
+  .zaboldanitxt1{
+    text-align: center;
+    font-weight: 700;
+    font-size: 35px;
+    text-shadow: 2px 2px 4px #000000;
+  }
+  .news img {
+    width: 12%;
+    float: left;
+    padding: 0.5em 0;
+    margin: 0 1em 0 0;
+  }
+  .news h2 {
+    margin: 0.5em 0;
+    font-size: 1.5em;
+    color: #27318b;
+  }
+  .news hr {
+    margin: 1em 0;
+    border: 1px dotted #27318b;
+    clear: both;
+  }
+  .news time {
+    font-size: 90%;
+    font-style: italic;
+  }
+  
+  #admin ul {
+  background-color: #dfdfdf;
+  }
+  #admin  li a {
+  color: black;
+  }
+  #admin li a:hover {
+  background-color: #c8a5a5;
+  }
+
+
+
+
+@media screen and (max-width: 700px) {
+ /* Responzivni stil za header */
+  .header {
+    background-position: fixed;
+    background-repeat: no-repeat;
+    height: 300px; /* Podesite visinu prema potrebi */
+    background-size: cover;
+    background-image: url("images/slika1.png");
+    position: relative;
+    margin-top: -50px; /* Podesite margine prema potrebi */
+  }
+
+  /* Responzivni stil za navigaciju */
+  .navigacija {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(49, 46, 46);
+    padding: 10px; /* Podesite padding prema potrebi */
+  }
+
+  li {
+    margin: 0 10px; /* Podesite razmak između stavki prema potrebi */
+  }
+
+  li a {
+    padding: 10px;
+  }
+
+  /* Responzivni stil za glavni deo */
+  main {
+    padding: 20px; /* Podesite padding prema potrebi */
+    background-color: rgba(10, 203, 100, 0.121);
+  }
+  h1 {
+    font-size: 2em; /* Podesite veličinu fonta prema potrebi */
+    text-align: center;
+  }
+
+  p {
+    font-size: 1em; /* Podesite veličinu fonta prema potrebi */
+  }
+
+  img {
+    width: 100%; /* Slika će zauzeti 100% širine roditeljskog elementa */
+  }
+  div {
+    margin-top: 50px; /* Smanjujemo gornji razmak na manjim ekranima */
+  }
+
+  p {
+    font-size: 15px; /* Smanjujemo veličinu fonta za naslov na manjim ekranima */
+  }
+
+  a img {
+    width: 30px; /* Smanjujemo veličinu ikona društvenih mreža na manjim ekranima */
+    margin-left: 10px; /* Dodajemo malo razmaka između ikona */
+  }
+
+  .container {
+    flex-direction: column; /* Postavljamo orijentaciju kontejnera u kolonu na manjim ekranima */
+  }
+
+  .tekst {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px; /* Dodajemo razmak između sekcija sa lokacijama i radnim vremenom */
+    margin-top: 1px;
+  }
+  .tekst > div {
+    flex: 1;
+    max-width: 45%; /* Postavljamo maksimalnu širinu za unutar elemenata */
+    margin-bottom: 5px; /* Dodajemo razmak između unutar elemenata */
+  }
+
+  /* Stilovi za pojedinačne sekcije unutar .tekst */
+  .tekst p {
+      margin: 0;
+  }
+  figure {
+    float: right;
+    width: 100%;
+    max-width: 700px; /* Postavljamo maksimalnu širinu slike */
+    margin-left: 20px; /* Dodajemo razmak između slike i teksta */
+  }
+
+
+  figcaption {
+      text-align: center;
+  }
+
+  .zaboldanitxt {
+    width: 90%; /* Prilagođavamo širinu na manjim ekranima */
+    padding: 20px; /* Prilagođavamo razmak za manje ekrane */
+  }
+
+  .zaboldanitxt1 {
+    font-size: 25px; /* Prilagođavamo veličinu fonta za manje ekrane */
+  }
+  .news img {
+		width: 95%;
+		padding: 0.5em;
+		margin: 0 1em 0.5em 0.5em;
+	}
+	.news time {
+		margin: 0 0 0 1em;
+	}
+
+}
+
+  
